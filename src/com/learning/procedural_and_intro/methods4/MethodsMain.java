@@ -321,7 +321,6 @@ public class MethodsMain {
       }
       System.out.println("\t");
     }
-
   }
 
   public static int findMaxIntInArray(int[] intArray) {
@@ -333,6 +332,7 @@ public class MethodsMain {
     }
     return max;
   }
+
 
 
 }
