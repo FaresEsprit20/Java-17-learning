@@ -297,7 +297,6 @@ public class MethodsMain {
     return filteredArray;
   }
 
-
   /**
    *  Get Words Amount with Regular Expression
    * @author Fares Ben Slama
