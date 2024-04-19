@@ -276,13 +276,9 @@ public class MethodsMain {
         filteredArray[i] = words[i];
       }
     }
-
     filteredArray = filterNulls(filteredArray);
-
     return filteredArray;
   }
-
-
 
   private static String[] filterNulls(String[] arr) {
     int newArraySize = 0;
@@ -291,19 +287,15 @@ public class MethodsMain {
         newArraySize++;
       }
     }
-
     String[] filteredArray = new String[newArraySize];
-
     int filteredArrayIndex = 0;
     for (String word : arr) {
       if (word != null) {
         filteredArray[filteredArrayIndex++] = word;
       }
     }
-
     return filteredArray;
   }
-
 
 
   /**
@@ -313,6 +305,7 @@ public class MethodsMain {
   public static int getWordsAmount(String text) {
     return text.split("[\\p{P}\\s]+").length;
   }
+
 
   public static void drawRectangle(int height, int width) {
     for (int i = 0; i < height; i++) {
