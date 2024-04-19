@@ -9,6 +9,7 @@ public class LoopsMain {
      *
      * Matrix Stars Display
      * @author Fares Ben Slama
+     *
      */
     System.out.println(" Enter the height of Pyramid : ");
     Scanner scanner = new Scanner(System.in);
@@ -22,12 +23,11 @@ public class LoopsMain {
         newHeight = i;
       }
 
-      for(int j = 0; j<= newHeight ; j++) {
+      for(int j = 0; j< newHeight ; j++) {
         System.out.print("*");
       }
       System.out.println();
     }
-
 
     System.out.println("======================== Loops ===========================  ");
     //while loop never executes if the condition is wrong
