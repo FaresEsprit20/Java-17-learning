@@ -1,4 +1,4 @@
-package com.learning.strings2;
+package com.learning.procedural_and_intro.strings2;
 import java.lang.Math;
 import java.math.BigDecimal;
 import java.math.RoundingMode;

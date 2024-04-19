@@ -1,7 +1,4 @@
-package com.learning.lopps3;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package com.learning.procedural_and_intro.lopps3;
 
 public class LoopHomework {
 

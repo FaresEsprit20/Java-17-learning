@@ -1,4 +1,4 @@
-package com.learning.arrays1;
+package com.learning.procedural_and_intro.arrays1;
 
 import java.util.Arrays;
 

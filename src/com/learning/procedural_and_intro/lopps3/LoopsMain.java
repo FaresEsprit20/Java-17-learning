@@ -1,4 +1,4 @@
-package com.learning.lopps3;
+package com.learning.procedural_and_intro.lopps3;
 
 import java.util.Scanner;
 

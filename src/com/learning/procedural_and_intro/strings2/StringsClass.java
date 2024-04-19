@@ -1,4 +1,4 @@
-package com.learning.strings2;
+package com.learning.procedural_and_intro.strings2;
 
 import java.util.Arrays;
 import java.util.regex.Matcher;

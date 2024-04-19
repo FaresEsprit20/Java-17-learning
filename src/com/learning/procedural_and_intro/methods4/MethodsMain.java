@@ -1,4 +1,4 @@
-package com.learning.methods4;
+package com.learning.procedural_and_intro.methods4;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
