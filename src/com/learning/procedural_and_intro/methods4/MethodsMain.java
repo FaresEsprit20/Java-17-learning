@@ -263,19 +263,55 @@ public class MethodsMain {
   }
 
 
+  /**
+   *
+   * Filter Words By filter
+   * @author Fares Ben Slama
+   */
+
   public static String[] filterWordsByLength(int minLength, String[] words) {
-    String[] newArray = new String[words.length];
-    Arrays.fill(newArray, " ");
+    String[] filteredArray = new String[words.length];
     for (int i = 0; i < words.length; i++) {
       if (words[i].length() >= minLength) {
-        newArray[i] = words[i];
+        filteredArray[i] = words[i];
       }
     }
-    return newArray;
+
+    filteredArray = filterNulls(filteredArray);
+
+    return filteredArray;
   }
 
+
+
+  private static String[] filterNulls(String[] arr) {
+    int newArraySize = 0;
+    for (String word : arr) {
+      if (word != null) {
+        newArraySize++;
+      }
+    }
+
+    String[] filteredArray = new String[newArraySize];
+
+    int filteredArrayIndex = 0;
+    for (String word : arr) {
+      if (word != null) {
+        filteredArray[filteredArrayIndex++] = word;
+      }
+    }
+
+    return filteredArray;
+  }
+
+
+
+  /**
+   *  Get Words Amount with Regular Expression
+   * @author Fares Ben Slama
+   */
   public static int getWordsAmount(String text) {
-    return text.length();
+    return text.split("[\\p{P}\\s]+").length;
   }
 
   public static void drawRectangle(int height, int width) {
