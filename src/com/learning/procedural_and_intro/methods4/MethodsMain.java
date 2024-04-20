@@ -335,4 +335,36 @@ public class MethodsMain {
 
 
 
+
+  /**
+   *
+   * @param amountOfElements
+   * @Author Fares Ben Slama
+   * Generate an array with random numbers from 1 to 100
+   */
+  public static int[] generateRandomArray(int amountOfElements) {
+    Random random = new Random();
+    int[] array = new int[amountOfElements];
+    for(int i =0;i<amountOfElements;i++) {
+      int randomInt = (random.nextInt(100) + 1);
+      array[i] = randomInt;
+    }
+    return array;
+  }
+  /**
+   *
+   * @Author Fares Ben Slama
+   * Generate an array with twice length of the first array
+   */
+  public static int[] extendArray(int[] arr) {
+    int length = arr.length *2;
+    int[] array = new int[length];
+    for(int i = 0,j = arr.length; i<arr.length && j< length;i++,j++) {
+      array[i] = arr[i];
+      array[j] = arr[i] * 2;
+    }
+    return array;
+  }
+
+
 }
