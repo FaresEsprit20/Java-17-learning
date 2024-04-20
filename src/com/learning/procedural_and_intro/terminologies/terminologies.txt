@@ -1,0 +1,11 @@
+
+JDK (Java Development Kit) : JDK includes JRE and JVm Plus all tools which are necessary for development of Java programs.
+ The debugger exists in JDK. We don't need the debugger in JRE.
+
+
+JRE (Java Runtime Environment) : JRE includes Jvm itself plus Java binaries and classes which are needed to execute programs.
+
+
+JVM (Java Virtual Machine) : Java virtual Machine is responsible for converting Byte code to Machine specific language.
+It is written in c++.
+You compile your using the Java compiler to byte code and then the Jvm executes that Byte code.
