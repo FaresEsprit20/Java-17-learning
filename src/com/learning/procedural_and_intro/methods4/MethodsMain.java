@@ -161,16 +161,20 @@ public class MethodsMain {
     return number2;
   }
 
-
-
-
-  public static int[] generateRandomArray(int amountOfElements) {
-    int[] array = new int[amountOfElements];
-    for (int i = 0; i < array.length; i++) {
-      Random random = new Random();
-      array[i] = random.nextInt(100);
+  /**
+   *
+   * @param number
+   * @author Fares Ben Slama
+   * Calculates the digits of an input number
+   */
+  public static int sumDigitsInPositiveNumber(int number) {
+    int sum = 0;
+    while(number!=0) {
+      int digit = number % 10;
+      sum += digit;
+      number = number/10;
     }
-    return array;
+    return sum;
   }
 
   public static void displayArray(int[] array) {
