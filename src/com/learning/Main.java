@@ -59,8 +59,13 @@ public class Main {
 
     public static double[][] transposeMatrix(double[][] matrix) {
         double aux = 0.0;
-        double[][] transposedMatrix = matrix;
-       for(int i=0;i<transposedMatrix.length;i++) {
+        double[][] transposedMatrix = new double[matrix.length][matrix[0].length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                transposedMatrix[i][j] = matrix[i][j];
+            }
+        }
+        for(int i=0;i<transposedMatrix.length;i++) {
            for(int j=i;j<transposedMatrix[i].length;j++) {
              aux = transposedMatrix[i][j];
              transposedMatrix[i][j] = transposedMatrix[j][i];
