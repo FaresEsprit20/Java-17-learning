@@ -79,12 +79,24 @@ public class Main {
        return transposedMatrix;
     }
 
-    public static void inverseMatrixHorizontally(double[][] matrix) {
+    public static double[][] inverseMatrixHorizontally(double[][] matrix) {
+        double[][] invertedHorizontallyMatrix = initializeMatrixFrom(matrix);
+        for(int i = 0; i< invertedHorizontallyMatrix.length; i++) {
+            for(int j = i; j< invertedHorizontallyMatrix[i].length; j++) {
 
+            }
+        }
+        return invertedHorizontallyMatrix;
     }
 
-    public static void inverseMatrixVertically(double[][] matrix) {
+    public static double[][] inverseMatrixVertically(double[][] matrix) {
+        double[][] invertedVerticallyMatrix = initializeMatrixFrom(matrix);
+        for(int i = 0; i< invertedVerticallyMatrix.length; i++) {
+            for(int j = i; j< invertedVerticallyMatrix[i].length; j++) {
 
+            }
+        }
+       return invertedVerticallyMatrix;
     }
 
     public static void rotate90(double[][] matrix) {
@@ -106,8 +118,6 @@ public class Main {
             }
             System.out.println();
         }
-
-
     }
 
 
