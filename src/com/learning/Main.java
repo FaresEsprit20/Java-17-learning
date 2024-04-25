@@ -1,5 +1,6 @@
 package com.learning;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -63,13 +64,13 @@ public class Main {
     }
 
     public static double[][] initializeMatrixFrom(double[][] matrix){
-        double[][] transposedMatrix = new double[matrix.length][matrix[0].length];
+        double[][] newMatrix = new double[matrix.length][matrix[0].length];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                transposedMatrix[i][j] = matrix[i][j];
+                newMatrix[i][j] = matrix[i][j];
             }
         }
-        return transposedMatrix;
+        return newMatrix;
     }
 
     public static double[][] transposeMatrix(double[][] matrix) {
@@ -87,13 +88,7 @@ public class Main {
 
     public static double[][] inverseMatrixHorizontally(double[][] matrix) {
         double[][] invertedHorizontallyMatrix = initializeMatrixFrom(matrix);
-        for(int i = 0; i < invertedHorizontallyMatrix.length; i++) {
-            for(int j = 0; j < invertedHorizontallyMatrix[i].length / 2; j++) {
-                double temp = invertedHorizontallyMatrix[i][j];
-                invertedHorizontallyMatrix[i][j] = invertedHorizontallyMatrix[i][invertedHorizontallyMatrix[i].length - 1 - j];
-                invertedHorizontallyMatrix[i][invertedHorizontallyMatrix[i].length - 1 - j] = temp;
-            }
-        }
+
         return invertedHorizontallyMatrix;
     }
 
@@ -121,12 +116,16 @@ public class Main {
     }
 
     public static void displayMatrix(double[][] matrix) {
-        for(int i=0;i<matrix.length;i++) {
-            for(int j=0;j<matrix[i].length;j++) {
-           System.out.printf("%f \t",matrix[i][j]);
+        System.out.println();
+        // Display the matrix
+        DecimalFormat df = new DecimalFormat("0.0");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(df.format(matrix[i][j]) + " \t ");
             }
             System.out.println();
         }
+        System.out.println();
     }
 
 
