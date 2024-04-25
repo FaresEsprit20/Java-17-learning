@@ -56,15 +56,19 @@ public class Main {
 
     }
 
-
-    public static double[][] transposeMatrix(double[][] matrix) {
-        double aux = 0.0;
+    public static double[][] initializeMatrixFrom(double[][] matrix){
         double[][] transposedMatrix = new double[matrix.length][matrix[0].length];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 transposedMatrix[i][j] = matrix[i][j];
             }
         }
+        return transposedMatrix;
+    }
+
+    public static double[][] transposeMatrix(double[][] matrix) {
+        double aux = 0.0;
+        double[][] transposedMatrix = initializeMatrixFrom(matrix);
         for(int i=0;i<transposedMatrix.length;i++) {
            for(int j=i;j<transposedMatrix[i].length;j++) {
              aux = transposedMatrix[i][j];
