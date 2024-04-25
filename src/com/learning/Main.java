@@ -37,6 +37,12 @@ public class Main {
           case 1:
               System.out.println(" Original Matrix ");
               displayMatrix(matrix);
+              System.out.println(" Transposed Matrix ");
+              double[][] tranMatrix = transposeMatrix(matrix);
+              displayMatrix(tranMatrix);
+              System.out.println(" Inverted Horizontally Matrix ");
+              double[][] inHerMatrix = inverseMatrixHorizontally(tranMatrix);
+              displayMatrix(inHerMatrix);
               rotate90(matrix);
               break;
           case 2:
@@ -81,13 +87,16 @@ public class Main {
 
     public static double[][] inverseMatrixHorizontally(double[][] matrix) {
         double[][] invertedHorizontallyMatrix = initializeMatrixFrom(matrix);
-        for(int i = 0; i< invertedHorizontallyMatrix.length; i++) {
-            for(int j = i; j< invertedHorizontallyMatrix[i].length; j++) {
-
+        for(int i = 0; i < invertedHorizontallyMatrix.length; i++) {
+            for(int j = 0; j < invertedHorizontallyMatrix[i].length / 2; j++) {
+                double temp = invertedHorizontallyMatrix[i][j];
+                invertedHorizontallyMatrix[i][j] = invertedHorizontallyMatrix[i][invertedHorizontallyMatrix[i].length - 1 - j];
+                invertedHorizontallyMatrix[i][invertedHorizontallyMatrix[i].length - 1 - j] = temp;
             }
         }
         return invertedHorizontallyMatrix;
     }
+
 
     public static double[][] inverseMatrixVertically(double[][] matrix) {
         double[][] invertedVerticallyMatrix = initializeMatrixFrom(matrix);
