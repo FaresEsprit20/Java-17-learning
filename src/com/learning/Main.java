@@ -23,9 +23,9 @@ public class Main {
 
         System.out.println(" Original Matrix ");
         displayMatrix(matrix);
-        transposeMatrix(matrix);
+        double[][] transposedMatrix = transposeMatrix(matrix);
         System.out.println(" Transposed Matrix ");
-        displayMatrix(matrix);
+        displayMatrix(transposedMatrix);
 
       System.out.println("How much do you want to rotate the Matrix  :");
       System.out.println("Press 1 to rotate matrix to 90 degrees");
@@ -59,18 +59,15 @@ public class Main {
 
     public static double[][] transposeMatrix(double[][] matrix) {
         double aux = 0.0;
-       for(int i=0;i<matrix.length;i++) {
-           for(int j=i;j<matrix[i].length;j++) {
-             aux = matrix[i][j];
-             matrix[i][j] = matrix[j][i];
-             matrix[j][i] = aux;
-               System.out.println(aux);
-               System.out.println(matrix[i][j]);
-               System.out.println(matrix[j][i]);
-               System.out.println("*************");
+        double[][] transposedMatrix = matrix;
+       for(int i=0;i<transposedMatrix.length;i++) {
+           for(int j=i;j<transposedMatrix[i].length;j++) {
+             aux = transposedMatrix[i][j];
+             transposedMatrix[i][j] = transposedMatrix[j][i];
+             transposedMatrix[j][i] = aux;
            }
        }
-       return matrix;
+       return transposedMatrix;
     }
 
     public static void inverseMatrixHorizontally(double[][] matrix) {
