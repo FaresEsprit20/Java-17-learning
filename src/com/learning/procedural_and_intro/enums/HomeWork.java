@@ -17,20 +17,16 @@ public class HomeWork {
             System.out.println("\n  Message Type Must be : A or B or C or D ");
             input = scanner.next().charAt(0);
         }
-        Priority priority = null;
+
+        Message message = null;
         switch (Character.toUpperCase(input)) {
             case 'A':
-                priority = Priority.HIGH;
-                System.out.println("\n Priority Type : "+priority.name());
+                message = Message.valueOf(String.valueOf(Character.toUpperCase(input)));
+                System.out.println("\n Priority Type : "+message.getPriority()+ " Message Type : "+message.name());
                 break;
-            case 'B':
-                priority = Priority.MEDIUM;
-                System.out.println("\n Priority Type : "+priority.name());
-                System.out.println();
-                break;
-            case 'C', 'D':
-                priority = Priority.LOW;
-                System.out.println("\n Priority Type : "+priority.name());
+            case 'B', 'C', 'D':
+                message = Message.valueOf(String.valueOf(Character.toUpperCase(input)));
+                System.out.println("\n Priority Type : "+message.getPriority()+ " Message Type : "+message.name());
                 System.out.println();
                 break;
         }
