@@ -35,24 +35,12 @@ public class Main {
         byte choice = scanner.nextByte();
         switch (choice) {
             case 1:
-                System.out.println(" Original Matrix ");
-                displayMatrix(matrix);
-                System.out.println(" Transposed Matrix ");
-                double[][] tranMatrix = transposeMatrix(matrix);
-                displayMatrix(tranMatrix);
-                System.out.println(" Inverted Horizontally Matrix ");
-                double[][] inHerMatrix = inverseMatrixHorizontally(tranMatrix);
-                displayMatrix(inHerMatrix);
                 rotate90(matrix);
                 break;
             case 2:
-                System.out.println(" Original Matrix ");
-                displayMatrix(matrix);
                 rotate180(matrix);
                 break;
             case 3:
-                System.out.println(" Original Matrix ");
-                displayMatrix(matrix);
                 rotate270(matrix);
                 break;
         }
@@ -82,27 +70,61 @@ public class Main {
 
     public static double[][] inverseMatrixHorizontally(double[][] matrix) {
         double[][] invertedHorizontallyMatrix = initializeMatrixFrom(matrix);
-
+        for(int i = 0; i< invertedHorizontallyMatrix.length;i++){
+            for(int j=0; j< invertedHorizontallyMatrix[i].length/2;j++){
+                double temp = invertedHorizontallyMatrix[i][j];
+                invertedHorizontallyMatrix[i][j] = invertedHorizontallyMatrix[i][invertedHorizontallyMatrix.length - 1-j];
+                invertedHorizontallyMatrix[i][invertedHorizontallyMatrix.length - 1-j] = temp;
+            }
+        }
         return invertedHorizontallyMatrix;
     }
 
 
     public static double[][] inverseMatrixVertically(double[][] matrix) {
         double[][] invertedVerticallyMatrix = initializeMatrixFrom(matrix);
-
+        for(int i =0;i<invertedVerticallyMatrix.length;i++) {
+            for(int j =0 ;j<invertedVerticallyMatrix[i].length / 2;j++) {
+                double temp = invertedVerticallyMatrix[j][i];
+                invertedVerticallyMatrix[j][i] = invertedVerticallyMatrix[invertedVerticallyMatrix[i].length -1 -j][i];
+                invertedVerticallyMatrix[invertedVerticallyMatrix[i].length -1 -j][i] = temp;
+            }
+        }
         return invertedVerticallyMatrix;
     }
 
     public static void rotate90(double[][] matrix) {
-
+        System.out.println(" Original Matrix ");
+        displayMatrix(matrix);
+        System.out.println(" Transposed Matrix ");
+        double[][] tranMatrix = transposeMatrix(matrix);
+        displayMatrix(tranMatrix);
+        System.out.println(" Rotated 90 deg Matrix ");
+        double[][] inHerMatrix = inverseMatrixHorizontally(tranMatrix);
+        displayMatrix(inHerMatrix);
     }
 
     public static void rotate180(double[][] matrix) {
-
+        System.out.println(" Original Matrix ");
+        displayMatrix(matrix);
+//        System.out.println(" Transposed Matrix ");
+//        double[][] tranMatrix = transposeMatrix(matrix);
+//        displayMatrix(tranMatrix);
+        System.out.println(" Rotated 180 deg Matrix ");
+        double[][] horizontalMatrix = inverseMatrixHorizontally(matrix);
+        double[][] verticalMatrix = inverseMatrixVertically(horizontalMatrix);
+        displayMatrix(verticalMatrix);
     }
 
     public static void rotate270(double[][] matrix) {
-
+        System.out.println(" Original Matrix ");
+        displayMatrix(matrix);
+        System.out.println(" Transposed Matrix ");
+        double[][] tranMatrix = transposeMatrix(matrix);
+        displayMatrix(tranMatrix);
+        System.out.println(" Rotated 270 deg Matrix ");
+        double[][] inVerMatrix = inverseMatrixVertically(tranMatrix);
+        displayMatrix(inVerMatrix);
     }
 
     public static void displayMatrix(double[][] matrix) {
