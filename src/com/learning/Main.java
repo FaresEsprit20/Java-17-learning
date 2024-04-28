@@ -107,9 +107,6 @@ public class Main {
     public static void rotate180(double[][] matrix) {
         System.out.println(" Original Matrix ");
         displayMatrix(matrix);
-//        System.out.println(" Transposed Matrix ");
-//        double[][] tranMatrix = transposeMatrix(matrix);
-//        displayMatrix(tranMatrix);
         System.out.println(" Rotated 180 deg Matrix ");
         double[][] horizontalMatrix = inverseMatrixHorizontally(matrix);
         double[][] verticalMatrix = inverseMatrixVertically(horizontalMatrix);
