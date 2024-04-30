@@ -1,0 +1,19 @@
+OOP definition: is a programming paradigm based on object.
+It is a software design approach in which concept of object occupies the first place.
+
+Object: object is always an instance of a class, it usually has properties and methods.
+
+Class: is a template for the object.
+
+Advantages of oop: Modularity, Scalability, Lower cost of development, Security and Reliability.
+
+OOP principles :
+
+1/Inheritance: Allows you to extend classes and inherit their properties and methods and reuse them without the need to recreate them or reinvent the wheel.
+
+2/Polymorphism: We can have one interface and multiple implementations. (For example for engine of car electric or gasoline) It allows us
+to write methods in many forms using overriding @override and overloading(Overload the methods signature).
+
+3/Abstraction: Allows us to not duplicate the code , regroup the common properties and features in one class
+
+4/Encapsulation: Keeps the data safe from external interference using the modifiers : private , default, protected, public
