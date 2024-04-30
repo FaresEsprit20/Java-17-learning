@@ -7,6 +7,12 @@ Class: is a template for the object.
 
 Advantages of oop: Modularity, Scalability, Lower cost of development, Security and Reliability.
 
+1/Scalability: OOP makes it easier to scale a program to handle an increasing amount of work or data.
+2/Maintainability: OOp allows us to add new features without the need to change the existing code.
+The OOP makes it easier to maintain and update existing code, as well as to fix bugs.
+3/Lower cost of development: OOp is a lot lower cost and time the procedural programming.
+4/Security and Reliability: Encapsulation and inheritance are two key features of OOP languages that can help you secure your code.
+
 OOP principles :
 
 1/Inheritance: Allows you to extend classes and inherit their properties and methods and reuse them without the need to recreate them or reinvent the wheel.
