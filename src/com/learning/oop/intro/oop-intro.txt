@@ -1,3 +1,6 @@
+
+************** OOp in Java  ****************
+
 OOP definition: is a programming paradigm based on object.
 It is a software design approach in which concept of object occupies the first place.
 
@@ -23,3 +26,31 @@ to write methods in many forms using overriding @override and overloading(Overlo
 3/Abstraction: Allows us to not duplicate the code , regroup the common properties and features in one class
 
 4/Encapsulation: Keeps the data safe from external interference using the modifiers : private , default, protected, public
+
+************** Classes ****************
+
+1/ Concrete Class: a class that has an implementation for all of its methods. They cannot have any unimplemented methods.
+ It can also extend an abstract class or implement an interface as long as it implements all their methods.
+ It is a complete class and can be instantiated using 'new' keyword.
+
+2/ Abstract Class:  is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+It is useful to reduce the system's complexity by hiding some implementation details. It can not be instantiated.
+Abstract classes can have implemented and abstract methods. These methods must be implemented using override when the abstract class is extended
+By a subclass unless the subclass is abstract too so we don't have to implement all of it's methods.
+
+3/ Nested Class: In Java, it is possible to define a class within another class, such classes are known as nested classes.
+They enable you to logically group classes that are only used in one place,
+ thus this increases the use of encapsulation and creates more readable and maintainable code.
+ We can create a nested class using static class as an inner class within our target class.
+
+4/ Anonymous Class: The anonymous class in Java is a way to create an unnamed class that extends a superclass or implements an interface on the fly.
+ They are often used for one-time implementations or event handlers.
+
+5/ Interface:  is defined as an abstract type used to specify the behavior of a class. An interface in Java is a blueprint of a behavior.
+ A Java interface contains static constants and abstract methods.  It can not be instantiated.
+ Interfaces can have only abstract methods that must be implemented using override after its implementation by the subclass .
+
+
+
+
+
