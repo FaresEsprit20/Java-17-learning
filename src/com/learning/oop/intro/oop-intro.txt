@@ -50,7 +50,8 @@ They enable you to logically group classes that are only used in one place,
  A Java interface contains static constants and abstract methods.  It can not be instantiated.
  Interfaces can have only abstract methods that must be implemented using override after its implementation by the subclass .
 
-
-
+6/ Static CLass: Java allows us to define a class within a class that is known as a nested class.
+ It may be static or non-static. The major difference between static and non-static class is that:
+An instance of the static nested class can be created without creating an instance of its outer class.
 
 
