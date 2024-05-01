@@ -22,9 +22,20 @@ public class oopMain {
     }
 
     public static void main(String... args) {
-
+       A a = new oopMain().new A();
+       B b = new oopMain.B();
     }
 
 
+    public class A {
+        A(){}
+    }
+
+    public static class B {
+        B() {
+
+        }
+
+    }
 
 }
