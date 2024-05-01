@@ -37,6 +37,8 @@ to write methods in many forms using overriding @override and overloading(Overlo
 It is useful to reduce the system's complexity by hiding some implementation details. It can not be instantiated.
 Abstract classes can have implemented and abstract methods. These methods must be implemented using override when the abstract class is extended
 By a subclass unless the subclass is abstract too so we don't have to implement all of it's methods.
+==> An abstract class can not be extended with other classes while interfaces allow multiple implementations for the same class.
+==========> We can declare all type of fields inside the abstract class.
 
 3/ Nested Class: In Java, it is possible to define a class within another class, such classes are known as nested classes.
 They enable you to logically group classes that are only used in one place,
@@ -48,7 +50,10 @@ They enable you to logically group classes that are only used in one place,
 
 5/ Interface:  is defined as an abstract type used to specify the behavior of a class. An interface in Java is a blueprint of a behavior.
  A Java interface contains static constants and abstract methods.  It can not be instantiated.
- Interfaces can have only abstract methods that must be implemented using override after its implementation by the subclass .
+ Interfaces can have only abstract methods that must be implemented using override after its implementation by the subclass . in Java11+ we can implement
+ and instantiate An interface .
+==> An abstract class can not be extended with other classes while interfaces allow multiple implementations for the same class.
+==========> We can declare only Constant fields inside the interface.
 
 6/ Static CLass: Java allows us to define a class within a class that is known as a nested class.
  It may be static or non-static. The major difference between static and non-static class is that:
