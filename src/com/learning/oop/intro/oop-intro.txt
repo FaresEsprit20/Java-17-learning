@@ -70,22 +70,28 @@ An instance of the static nested class can be created without creating an instan
 
 1/ Single Responsibility Principle:
 
+  - Each Class should only have one sole purpose, and not be filled with excessive functionalities.
+
 
 2/ Open Closed Principle:
+
+  - Classes should be open for extension, closed for modification.
+  - In other words, you should not have to rewrite an existing class for implementing new features.
 
 
 3/ Liskov Substitution Principle:
 
-
-2/ Open Closed Principle:
+  - Every Subclass or derived class should be substitutable for their base or parent class.
 
 
 4/ Interface Segregation Principle:
 
+  - Interfaces should not force classes to implement what they can't do.
+  - Large interfaces should be divided into small ones.
 
 5/ Dependency Inversion Principle:
 
-
+  - Components should depend on abstraction (abstract classes or interfaces) and not concretion(Concrete classes).
 
 
 
