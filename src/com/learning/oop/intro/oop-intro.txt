@@ -91,7 +91,7 @@ An instance of the static nested class can be created without creating an instan
 
 5/ Dependency Inversion Principle:
 
-  - Components should depend on abstraction (abstract classes or interfaces) and not concretion(Concrete classes).
+  - Components should depend on abstraction (abstract classes or interfaces) and not concretion (Concrete classes).
 
 
 
