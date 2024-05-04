@@ -35,23 +35,25 @@ public class HomeworkOOPMain {
         Book[] filteredBooksByAfterYear = bookService.filterBooksAfterSpecifiedYear(1998,books);
 
         //displaying filtered books by author
-        for(Book book : filteredBooksByAuthor) {
-            System.out.println("\n Books by Author :  \n");
-            System.out.println(book.toString());
+        System.out.println("\n Books by Author :  \n");
+        for (Book value : filteredBooksByAuthor) {
+            if(value != null)
+            System.out.println(value.toString());
             System.out.println();
         }
 
         //displaying filtered books by publisher
-        for(Book book : filteredBooksByPublisher) {
-            System.out.println("\n Books by Publisher :  \n");
-            System.out.println();
-            System.out.println(book.toString());
+        System.out.println("\n Books by Publisher :  \n");
+        for (Book book : filteredBooksByPublisher) {
+            if (book != null)
+                System.out.println(book.toString());
             System.out.println();
         }
 
         //displaying filtered books after specified year
-        for(Book book : filteredBooksByAfterYear) {
-            System.out.println("\n Books After specified Year :  \n");
+        System.out.println("\n Books After specified Year :  \n");
+        for (Book book : filteredBooksByAfterYear) {
+            if(book!= null)
             System.out.println(book.toString());
             System.out.println();
         }
