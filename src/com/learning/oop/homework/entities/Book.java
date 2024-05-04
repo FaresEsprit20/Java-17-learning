@@ -18,22 +18,22 @@ public class Book {
     public Book() {
     }
 
-    public Book(int id, String name, BigDecimal price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
 
-    public Book(String name, int publishingYear, int amountOfPages, BigDecimal price, Publisher publisher, CoverType coverType) {
+
+
+
+    public Book(int id, String name, int publishingYear, int amountOfPages, BigDecimal price, Author[] authors, Publisher publisher, CoverType coverType) {
+        this.id = id;
         this.name = name;
         this.publishingYear = publishingYear;
         this.amountOfPages = amountOfPages;
         this.price = price;
+        this.authors = authors;
         this.publisher = publisher;
         this.coverType = coverType;
     }
 
-    public Book(int id, String name, int publishingYear, int amountOfPages, BigDecimal price, Author[] authors, Publisher publisher, CoverType coverType) {
+    public Book(int id, String name, Author[] authors, Publisher publisher, int publishingYear, int amountOfPages, BigDecimal price, CoverType coverType) {
         this.id = id;
         this.name = name;
         this.publishingYear = publishingYear;
